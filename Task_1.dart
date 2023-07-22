@@ -1,16 +1,16 @@
 import 'dart:io';
 void main() {
   Calcluator calcluator = Calcluator();
-  int num1, num2;
+ int num1, num2;
   String opreat;
   while (true) {
     try {
-      print("Please enter first number /* zero to exit the program */");
+      print("Please enter first number ");
       num1 = int.parse(stdin.readLineSync()!);
-      if (num1 == 0) break; 
-      print("Please enter the operator +,-,*,/");
+      print("Please enter the operator +,-,*,/  /* q to exit the program */" );
       opreat = stdin.readLineSync()!;
-      print("Please enter second number /* zero to exit the program */");
+      if (opreat == 'q') break; 
+      print("Please enter second number ");
       num2 = int.parse(stdin.readLineSync()!);
       switch (opreat) {
         case '+':
